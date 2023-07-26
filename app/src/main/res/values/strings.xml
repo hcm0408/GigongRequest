@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GigongRequest</string>
+    <string name="title_home">기공신청서</string>
+    <string name="title_dashboard">기공리스트</string>
+</resources>

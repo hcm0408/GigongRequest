@@ -1,0 +1,8 @@
+<paths>
+    <external-path name="my_images" path="Android/data/com.onedaydent.onedaydent/files/Pictures" />
+    <!--
+    <files-path name="files" path="."/>
+    <external-files-path name="external_files_path" path="." />
+    <external-path name="external_files" path="."/>
+    -->
+</paths>

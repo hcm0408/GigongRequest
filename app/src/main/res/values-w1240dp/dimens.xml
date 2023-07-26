@@ -1,0 +1,23 @@
+<resources>
+    <dimen name="activity_horizontal_margin">200dp</dimen>
+    <dimen name="gigongrequest_head">40sp</dimen>
+    <dimen name="gigongrequest_body_head">18sp</dimen>
+    <dimen name="gigongrequest_final_head">13sp</dimen>
+    <dimen name="gigongrequest_body">22sp</dimen>
+    <dimen name="gigongrequest_body2">19sp</dimen>
+    <dimen name="gigongrequest_body3">18sp</dimen>
+    <dimen name="gigongrequest_body_padding">80dp</dimen>
+    <dimen name="gigongrequest_body_paddingTop">60dp</dimen>
+    <dimen name="gigongrequest_head_height">200dp</dimen>
+    <dimen name="gigongrequest_margin">200dp</dimen>
+    <dimen name="font_size2">30sp</dimen>
+    <dimen name="circle_font">30sp</dimen>
+    <dimen name="circle1">50dp</dimen>
+    <dimen name="circle2">50dp</dimen>
+    <dimen name="circle3">55dp</dimen>
+    <dimen name="circle4">55dp</dimen>
+    <dimen name="circle5">60dp</dimen>
+    <dimen name="circle6">65dp</dimen>
+    <dimen name="circle7">70dp</dimen>
+    <dimen name="circle8">75dp</dimen>
+</resources>

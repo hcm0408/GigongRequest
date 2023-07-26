@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/gigongrequest_body_padding"
+    android:paddingRight="@dimen/gigongrequest_body_padding"
+    android:paddingBottom="?attr/actionBarSize"
+    tools:context=".ui.gigongrequest.GigongRequestFragmentPage5">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/gigongrequest_head"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gmarket"
+        android:textFontWeight="500"
+        android:text="요청서를 작성해주세요"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/request5_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/gigongrequest_body_paddingTop"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/request5_nextbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/gigongrequest_final_head"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gmarket"
+                android:textFontWeight="500"
+                android:text="기본정보" />
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="작성일" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/gr_RequestDateTemp"
+                        android:fontFamily="@font/gmarket"
+                        android:inputType="date"
+                        android:hint="접수일"
+                        android:background="@color/transfer"
+                        android:textSize="@dimen/gigongrequest_body3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="관" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_hall"
+                        android:autofillHints="관"
+                        android:paddingTop="2dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="차트번호" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/gr_ChartID"
+                        android:fontFamily="@font/gmarket"
+                        android:hint="차트번호"
+                        android:background="@color/transfer"
+                        android:textSize="@dimen/gigongrequest_body3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="성함" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/gr_Name"
+                        android:fontFamily="@font/gmarket"
+                        android:hint="성함"
+                        android:background="@color/transfer"
+                        android:textSize="@dimen/gigongrequest_body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="성별" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_Gender"
+                        android:autofillHints="성별"
+                        android:paddingTop="2dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="당일여부" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_Type"
+                        android:autofillHints="당일여부"
+                        android:paddingTop="2dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="DR" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_dr_mb_name"
+                        android:autofillHints="원장이름"
+                        android:paddingTop="2dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="DH" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_mb_name"
+                        android:autofillHints="위생사이름"
+                        android:paddingTop="2dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/gigongrequest_final_head"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gmarket"
+                android:textFontWeight="500"
+                android:text="공통정보" />
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="바이트" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="대합치" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="지그" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="동공사진" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="지대치사진" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:paddingLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/gigongrequest_final_head"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="쉐이드사진" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="당일 2nd OP" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Gum Porcelain" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Abut Margin" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/gr_check9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:gravity="left"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@color/transfer">
+
+                    </androidx.appcompat.widget.AppCompatCheckBox>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="쉐이드" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/gr_Shade"
+                        android:autofillHints="쉐이드"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        android:background="@color/transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/gigongrequest_final_head"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gmarket"
+                android:textFontWeight="500"
+                android:text="치아정보" />
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:weightSum="9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1.05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="치식" />
+
+                    <TextView
+                        android:layout_weight="0.95"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="의뢰내용" />
+
+                    <TextView
+                        android:layout_weight="1.03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Healing" />
+
+                    <TextView
+                        android:layout_weight="1.07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Next" />
+
+                    <TextView
+                        android:layout_weight="0.96"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="5dp"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Fixture" />
+
+                    <TextView
+                        android:layout_weight="0.91"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Coping / Scan" />
+
+                    <TextView
+                        android:layout_weight="1.03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Custom" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="ScanType" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/gmarket"
+                        android:textFontWeight="500"
+                        android:text="Type" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/request5_options1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/gigongrequest_final_head"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gmarket"
+                android:textFontWeight="500"
+                android:text="메모" />
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp"
+                android:background="@drawable/border4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/request5_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="650dp">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@+id/request5_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        android:textSize="@dimen/gigongrequest_final_head"
+        android:textColor="@color/white"
+        android:id="@+id/request5_nextbtn"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/gmarket"
+        android:textFontWeight="400"
+        android:text="전송"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
